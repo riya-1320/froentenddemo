@@ -47,7 +47,7 @@ import React, {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            `http://13.202.225.45:5000/api/components/combined/${id}`,
+            `/api/components/combined/${id}`,
             {
               headers: {
                 "Content-Type": "application/json",
@@ -421,7 +421,7 @@ import React, {
       try {
           console.log("here",cleanedItems);
         const response = await fetch(
-          `http://13.202.225.45:5000/api/components/combined/${id}`,
+          `/api/components/combined/${id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json",
@@ -460,7 +460,7 @@ import React, {
       // Here you might want to include validation before sending
       try {
         const response = await fetch(
-          `http://13.202.225.45:5000/api/components/combined-details/${id}`,
+          `/api/components/combined-details/${id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" ,
@@ -501,7 +501,7 @@ import React, {
       console.log(updatedBOItem);
       try {
         const response = await fetch(
-          `http://13.202.225.45:5000/api/components/combined-details/${id}`,
+          `/api/components/combined-details/${id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json",

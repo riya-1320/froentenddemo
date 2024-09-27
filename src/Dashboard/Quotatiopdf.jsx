@@ -13,7 +13,7 @@ const navigate = useNavigate();
     const fetchQuotationData = async () => {
       try {
         const response = await fetch(
-          `http://13.202.225.45:5000/api/components/combined/${props.id}`,
+          `/api/components/combined/${props.id}`,
           {
             headers: {
               "Content-Type": "application/json",

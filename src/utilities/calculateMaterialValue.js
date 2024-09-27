@@ -80,7 +80,7 @@ export const submitMaterialSelection = async (id, cleanedItems) => {
     });
   
     try {
-      const response = await fetch(`http://13.202.225.45/api/components/combined/${id}`, {
+      const response = await fetch(`/api/components/combined/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ items: cleanedItems }),

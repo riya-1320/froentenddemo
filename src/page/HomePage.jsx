@@ -31,7 +31,7 @@ const HomePage = () => {
     const fetchMaterials = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://13.202.225.45:5000/api/components/rate-materials', {
+        const response = await fetch('/api/components/rate-materials', {
           headers: {
             'Content-Type': 'application/json',
             'x-auth-token': token,
@@ -155,7 +155,7 @@ const HomePage = () => {
 
     try {
       const quotationResponse = await fetch(
-        'http://13.202.225.45:5000/api/components/combined/lastQuotationNumber',
+        '/api/components/combined/lastQuotationNumber',
         {
           headers: {
             'Content-Type': 'application/json',
@@ -176,7 +176,7 @@ const HomePage = () => {
       };
 
       const response = await fetch(
-        'http://13.202.225.45:5000/api/components/combined',
+        '/api/components/combined',
         {
           method: 'POST',
           headers: {

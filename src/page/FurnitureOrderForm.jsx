@@ -203,7 +203,7 @@ const FurnitureOrderForm = () => {
     console.log(JSON.stringify(requestBody));
 
     try {
-      const response = await axios.put(`http://13.202.225.45:5000/api/components/combined/${id}`, requestBody, {
+      const response = await axios.put(`/api/components/combined/${id}`, requestBody, {
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': token,

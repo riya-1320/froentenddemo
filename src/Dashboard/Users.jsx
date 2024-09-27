@@ -15,7 +15,7 @@ const Users = () => {
   // Fetch users from API
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://13.202.225.45:5000/api/components/user/alluser', {
+      const response = await axios.get('/api/components/user/alluser', {
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': localStorage.getItem('token'), // Get token from localStorage and send it in the request
@@ -37,7 +37,7 @@ const Users = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        await axios.delete(`http://13.202.225.45:5000/api/components/user/${id}`, {
+        await axios.delete(`/api/components/user/${id}`, {
           headers: {
             'x-auth-token': localStorage.getItem('token'),
           },
@@ -58,7 +58,7 @@ const Users = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://13.202.225.45:5000/api/components/user/${editingUser}`,
+        `/api/components/user/${editingUser}`,
         userData,
         {
           headers: {
@@ -89,7 +89,7 @@ const Users = () => {
   const handleAddUser = async () => {
     try {
       await axios.post(
-        'http://13.202.225.45:5000/api/components/register',
+        '/api/components/register',
         newUserData,
         {
           headers: {

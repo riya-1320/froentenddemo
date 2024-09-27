@@ -21,7 +21,7 @@ const Userquotations = () => {
   useEffect(() => {
     const fetchQuotationsByUsername = async () => {
       try {
-        const response = await axios.get('http://13.202.225.45:5000/api/components/combine/getFurnitureDetailByUsername', {
+        const response = await axios.get('/api/components/combine/getFurnitureDetailByUsername', {
           params: { username },
           headers: {
             'Content-Type': 'application/json',

@@ -38,7 +38,7 @@ export const MaterialsProvider = ({ children }) => {
   const fetchMaterialTypeOptions = async () => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.get('http://13.202.225.45:5000/api/components/rate-materials', {
+      const response = await axios.get('/api/components/rate-materials', {
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': token,
@@ -63,7 +63,7 @@ export const MaterialsProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await axios.post(
-        'http://13.202.225.45:5000/api/components/rate-materials',
+        '/api/components/rate-materials',
         {
           material_type: materialType,
           options,
@@ -98,7 +98,7 @@ export const MaterialsProvider = ({ children }) => {
   const fetchMaterials = async () => {
     try {
       console.log(token);
-      const response = await fetch('http://13.202.225.45:5000/api/components/rate-materials', {
+      const response = await fetch('/api/components/rate-materials', {
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': token,
@@ -154,7 +154,7 @@ export const MaterialsProvider = ({ children }) => {
   // const fetchQuotations = async () => {
   //   try {
   //     const response = await axios.get(
-  //       'http://13.202.225.45:5000/api/components/combined/getAllFurniture-Detail', {
+  //       '/api/components/combined/getAllFurniture-Detail', {
   //         headers: {
   //           'Content-Type': 'application/json',
   //           'x-auth-token': token,
@@ -171,7 +171,7 @@ export const MaterialsProvider = ({ children }) => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://13.202.225.45:5000/api/components/user/alluser',{
+      const response = await fetch('/api/components/user/alluser',{
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': localStorage.getItem('token'),
@@ -198,7 +198,7 @@ export const MaterialsProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        'http://13.202.225.45:5000/api/components/combined',
+        '/api/components/combined',
         {
           method: 'POST',
           headers: {
@@ -232,7 +232,7 @@ export const MaterialsProvider = ({ children }) => {
   const updateUser = async (id, userData) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://13.202.225.45:5000/api/components/user/${id}`, {
+      const response = await fetch(`/api/components/user/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -261,7 +261,7 @@ export const MaterialsProvider = ({ children }) => {
   const deleteUser = async (id) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://13.202.225.45:5000/api/components/user/${id}`, {
+      const response = await fetch(`/api/components/user/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -289,7 +289,7 @@ export const MaterialsProvider = ({ children }) => {
 const addUser = async (userData) => {
   setLoading(true);
   try {
-    const response = await fetch('http://13.202.225.45:5000/api/components/register', { // Adjust endpoint as necessary
+    const response = await fetch('/api/components/register', { // Adjust endpoint as necessary
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const Home = () => {
     try {
       const token = localStorage.getItem('token'); // Get token from localStorage
       const response = await axios.get(
-        'http://13.202.225.45:5000/api/components/combined/getAllFurniture-Detail',
+        '/api/components/combined/getAllFurniture-Detail',
         {
           headers: {
             'Content-Type': 'application/json',
